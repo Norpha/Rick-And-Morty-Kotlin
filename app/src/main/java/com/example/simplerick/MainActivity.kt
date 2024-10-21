@@ -70,8 +70,9 @@ class MainActivity : ComponentActivity() {
 
     @Composable
     fun CharacterDetailScreen(characterId: Int, viewModel: TvCharacterViewModel = hiltViewModel()) {
-        // Assume we have a method in the ViewModel to get character by ID
+
         val characters by viewModel.characters.observeAsState(emptyList())
         val character = characters.find { it.id == characterId }
         character?.let { CharacterDetail(it) }
-    }}
+    }
+}

@@ -78,12 +78,14 @@ dependencies {
     implementation (libs.hilt.android.v244)
     kapt (libs.hilt.compiler.v244)
 
+    implementation (libs.androidx.hilt.navigation.compose.v100)
+
     // Retrofit (for API requests)
-    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation (libs.retrofit)
+    implementation (libs.converter.gson)
 
     // Coil (for image loading)
-    implementation("io.coil-kt:coil-compose:2.1.0")
+    implementation(libs.coil.compose)
 
     // Jetpack Compose
     implementation (libs.ui)

@@ -10,15 +10,15 @@ import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
 
 @Module
-@InstallIn(SingletonComponent::class) // The module will be available for the entire app.
+@InstallIn(SingletonComponent::class)
 object NetworkModule {
 
     @Provides
     @Singleton
     fun provideRetrofit(): Retrofit {
         return Retrofit.Builder()
-            .baseUrl("https://rickandmortyapi.com/api/") // Use the appropriate base URL
-            .addConverterFactory(GsonConverterFactory.create()) // For converting JSON
+            .baseUrl("https://rickandmortyapi.com/api/")
+            .addConverterFactory(GsonConverterFactory.create())
             .build()
     }
 
