@@ -28,12 +28,12 @@ class TvCharacterViewModel @Inject constructor(private val repository: TvCharact
 
     fun addToFavorites(character: TvCharacter) {
         _favorites.value?.add(character)
-        _favorites.value = _favorites.value // Trigger observer
+        _favorites.value = _favorites.value
     }
 
     fun removeFromFavorites(character: TvCharacter) {
         _favorites.value?.remove(character)
-        _favorites.value = _favorites.value // Trigger observer
+        _favorites.value = _favorites.value
     }
 
     fun isFavorite(character: TvCharacter): Boolean {

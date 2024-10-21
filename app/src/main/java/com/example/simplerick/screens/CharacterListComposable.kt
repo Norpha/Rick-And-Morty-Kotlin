@@ -18,6 +18,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.unit.dp
+import androidx.hilt.navigation.compose.hiltViewModel
 import coil.compose.rememberAsyncImagePainter
 import coil.compose.rememberImagePainter
 import com.example.network.model.TvCharacter
@@ -26,7 +27,7 @@ import java.lang.reflect.Modifier
 
 
 @Composable
-fun CharacterList(viewModel: TvCharacterViewModel, onCharacterClick: (TvCharacter) -> Unit) {
+fun CharacterList(viewModel: TvCharacterViewModel = hiltViewModel(), onCharacterClick: (TvCharacter) -> Unit) {
     val characters by viewModel.characters.observeAsState(emptyList())
     LazyColumn {
         items(characters) { character ->
