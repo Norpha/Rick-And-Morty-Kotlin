@@ -3,10 +3,10 @@ agp = "8.5.2"
 coilCompose = "2.1.0"
 converterGson = "2.9.0"
 hiltAndroid = "2.51.1"
-hiltAndroidVersion = "2.44"
-hiltCompiler = "2.44"
+hiltAndroidVersion = "2.51.1"
+hiltCompiler = "2.51.1"
 hiltNavigationCompose = "1.2.0"
-hiltNavigationComposeVersion = "1.0.0"
+hiltNavigationComposeVersion = "1.2.0"
 kotlin = "2.0.0"
 coreKtx = "1.13.1"
 junit = "4.13.2"
@@ -19,23 +19,31 @@ appcompat = "1.7.0"
 material = "1.12.0"
 materialVersion = "1.7.4"
 navigationCompose = "2.8.3"
-navigationComposeVersion = "2.4.0"
+navigationComposeVersion = "2.8.3"
 retrofit = "2.9.0"
 runtimeLivedata = "1.7.4"
 ui = "1.7.4"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+#noinspection SimilarGradleDependency
 androidx-hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hiltNavigationCompose" }
+#noinspection SimilarGradleDependency
 androidx-hilt-navigation-compose-v100 = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hiltNavigationComposeVersion" }
 androidx-material = { module = "androidx.compose.material:material", version.ref = "materialVersion" }
+#noinspection SimilarGradleDependency
 androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
+#noinspection SimilarGradleDependency
 androidx-navigation-compose-v240 = { module = "androidx.navigation:navigation-compose", version.ref = "navigationComposeVersion" }
 coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coilCompose" }
 converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "converterGson" }
+#noinspection SimilarGradleDependency
 hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroid" }
+#noinspection SimilarGradleDependency
 hilt-android-v244 = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroidVersion" }
+#noinspection SimilarGradleDependency
 hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hiltAndroid" }
+#noinspection SimilarGradleDependency
 hilt-compiler-v244 = { module = "com.google.dagger:hilt-compiler", version.ref = "hiltCompiler" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
@@ -58,8 +66,10 @@ ui = { module = "androidx.compose.ui:ui", version.ref = "ui" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
+#noinspection SimilarGradleDependency
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 android-library = { id = "com.android.library", version.ref = "agp" }
+#noinspection SimilarGradleDependency
 org-jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 
 
