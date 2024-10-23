@@ -71,6 +71,9 @@ class MainActivity : ComponentActivity() {
     @Composable
     fun CharacterDetailScreen(characterId: Int, viewModel: TvCharacterViewModel = hiltViewModel()) {
 
+        viewModel.fetchCharacters()
+
+
         val characters by viewModel.characters.observeAsState(emptyList())
         val character = characters.find { it.id == characterId }
         character?.let { CharacterDetail(it) }
