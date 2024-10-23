@@ -27,13 +27,15 @@ class TvCharacterViewModel @Inject constructor(private val repository: TvCharact
     }
 
     fun addToFavorites(character: TvCharacter) {
-        _favorites.value?.add(character)
-        _favorites.value = _favorites.value
+        val currentFavorites = _favorites.value?.toMutableList() ?: mutableListOf()
+        currentFavorites.add(character)
+        _favorites.value = currentFavorites
     }
 
     fun removeFromFavorites(character: TvCharacter) {
-        _favorites.value?.remove(character)
-        _favorites.value = _favorites.value
+        val currentFavorites = _favorites.value?.toMutableList() ?: mutableListOf()
+        currentFavorites.remove(character)
+        _favorites.value = currentFavorites
     }
 
     fun isFavorite(character: TvCharacter): Boolean {

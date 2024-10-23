@@ -11,6 +11,8 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -21,7 +23,11 @@ import com.example.simplerick.viewmodel.TvCharacterViewModel
 
 @Composable
 fun CharacterDetail(character: TvCharacter, viewModel: TvCharacterViewModel = hiltViewModel()) {
-    val isFavorite = viewModel.isFavorite(character)
+    //val isFavorite = viewModel.isFavorite(character)
+
+    val favorites by viewModel.favorites.observeAsState(mutableListOf())
+    val isFavorite = favorites.contains(character)
+
 
     Column(
         modifier = Modifier
