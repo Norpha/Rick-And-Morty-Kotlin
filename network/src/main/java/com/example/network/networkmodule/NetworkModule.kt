@@ -28,3 +28,12 @@ object NetworkModule {
         return retrofit.create(RickAndMortyApi::class.java)
     }
 }
+
+
+
+
+
+
+
+
+

@@ -98,5 +98,9 @@ dependencies {
 
     implementation (libs.androidx.navigation.compose)
 
+    //Room Database
+
+    implementation (libs.androidx.room.runtime)
+
 
 }

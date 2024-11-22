@@ -21,6 +21,7 @@ materialVersion = "1.7.4"
 navigationCompose = "2.8.3"
 navigationComposeVersion = "2.8.3"
 retrofit = "2.9.0"
+roomRuntime = "2.6.1"
 runtimeLivedata = "1.7.4"
 ui = "1.7.4"
 
@@ -35,6 +36,7 @@ androidx-material = { module = "androidx.compose.material:material", version.ref
 androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
 #noinspection SimilarGradleDependency
 androidx-navigation-compose-v240 = { module = "androidx.navigation:navigation-compose", version.ref = "navigationComposeVersion" }
+androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "roomRuntime" }
 coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coilCompose" }
 converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "converterGson" }
 #noinspection SimilarGradleDependency

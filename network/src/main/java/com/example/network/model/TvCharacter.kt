@@ -1,5 +1,8 @@
 package com.example.network.model
 
+import androidx.annotation.Keep
+
+@Keep
 data class TvCharacter(
     val id: Int,
     val name: String,
