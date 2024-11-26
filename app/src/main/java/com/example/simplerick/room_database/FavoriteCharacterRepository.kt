@@ -1,9 +1,10 @@
 package com.example.simplerick.room_database
 
 import androidx.lifecycle.LiveData
+import kotlinx.coroutines.flow.Flow
 
 class FavoriteCharacterRepository (private val dao: FavoriteCharacterDao) {
-    val favorites: LiveData<List<FavoriteCharacter>> = dao.getFavoriteCharacters()
+    val favorites: Flow<List<FavoriteCharacter>> = dao.getFavoriteCharacters()
 
     suspend fun addFavorite (character: FavoriteCharacter){
         dao.addFavorite(character)
@@ -12,4 +13,6 @@ class FavoriteCharacterRepository (private val dao: FavoriteCharacterDao) {
     suspend fun removeFavorite(character: FavoriteCharacter) {
         dao.removeFavorite(character)
     }
+
+
 }

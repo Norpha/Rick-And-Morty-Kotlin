@@ -65,6 +65,7 @@ dependencies {
     implementation(libs.androidx.material3)
     implementation(project(":network"))
     implementation(libs.androidx.runtime.livedata)
+    implementation(libs.androidx.ui.test.android)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

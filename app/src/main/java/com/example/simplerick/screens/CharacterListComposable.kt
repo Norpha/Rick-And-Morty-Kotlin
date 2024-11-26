@@ -30,18 +30,18 @@ import com.example.simplerick.viewmodel.TvCharacterViewModel
 
 
 @Composable
-fun CharacterList(viewModel: TvCharacterViewModel = hiltViewModel(), onCharacterClick: (TvCharacter) -> Unit,onAddToFavoritesClick: (TvCharacter) -> Unit){
+fun CharacterList(viewModel: TvCharacterViewModel = hiltViewModel(), onCharacterClick: (TvCharacter) -> Unit){
     val characters by viewModel.characters.observeAsState(emptyList())
     LazyColumn {
         items(characters) { character ->
-            CharacterItem(character, onCharacterClick,onAddToFavoritesClick)
+            CharacterItem(character, onCharacterClick)
         }
     }
 }
 
 
 @Composable
-fun CharacterItem(character: TvCharacter, onCharacterClick: (TvCharacter) -> Unit, onAddToFavoritesClick: (TvCharacter) -> Unit) {
+fun CharacterItem(character: TvCharacter, onCharacterClick: (TvCharacter) -> Unit) {
     Row(
         modifier = androidx.compose.ui.Modifier
             .fillMaxWidth()
@@ -60,11 +60,7 @@ fun CharacterItem(character: TvCharacter, onCharacterClick: (TvCharacter) -> Uni
         }
         Spacer(modifier = Modifier.width(8.dp))
 
-        IconButton(onClick = { onAddToFavoritesClick(character) }) {
-            Icon(
-                imageVector = Icons.Default.FavoriteBorder,
-                contentDescription = "Add to Favorites"
-            )
+
     }
 }
-}
+
